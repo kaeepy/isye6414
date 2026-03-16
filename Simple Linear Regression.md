@@ -51,7 +51,11 @@ Extension of simple linear regression to include more than one predicting variab
 We estimate the relationship as a plane
 
 **Polynomial regression**
-$$Y=\beta_0 + \beta_1X+\beta_2X^2 + \epsilon$$
+
+$$
+Y=\beta_0 + \beta_1X+\beta_2X^2 + \epsilon
+$$
+
 Captures more complex relationships between response and predicting variables  
 We are captures nonlinear relationship
 This also falls under the linear regression framework because it can be translated into linear regression, we can think of $X$ and $X^2$ as two different predicting variables and model using linear regression
@@ -65,14 +69,21 @@ This also falls under the linear regression framework because it can be translat
 ### Simple Linear Regression
 **Model**  
 The goal is to fit a non-deterministic linear model (a line) that describes the linear relationship
-$$Y=\beta_0 + \beta_1X + \epsilon$$
+
+$$
+Y=\beta_0 + \beta_1X + \epsilon
+$$
+
 $\beta_0$ - intercept  
 $\beta_1$ - slope  
 $\epsilon$ - (random) deviance of the data from the linear model
 
 **Data**  
 We have $n$ pairs of data which consists of a value for response variable and a value for the predicting variables
-$$\text{Data:}\{(x_1,y_1),(x_2,y_2)...(x_n,y_n)\}$$
+
+$$
+\text{Data:}\{(x_1,y_1),(x_2,y_2)...(x_n,y_n)\}
+$$
 
 **Model Assumption**  
 1. Linearity/Mean Zero Assumption: $\mathbb{E}(\epsilon_i) = 0$
@@ -107,26 +118,56 @@ We are *estimating approximate of those parameters*
 The best line is one that makes the errors as small as possible given a criterion. The deviances of the data from the line (Model) is also called error terms
 
 Minimize the sum of squared residuals or errors with respect to $\beta_0,\beta_1$
-$$\sum^n_{i=1} (y_i-(\beta_0 - \beta_1x_i))^2$$
-$$\hat{\beta}_0 = \bar{y} - \hat{\beta_1}\bar{x}$$
-$$\hat{\beta}_1 = \frac{S_{xy}}{S_{xx}} = \frac{\sum y_i(x_i-\bar{x})}{\sum (x_i - \bar{x})^2}$$
+
+$$
+\sum^n_{i=1} (y_i-(\beta_0 - \beta_1x_i))^2
+$$
+
+$$
+\hat{\beta}_0 = \bar{y} - \hat{\beta_1}\bar{x}
+$$
+
+$$
+\hat{\beta}_1 = \frac{S_{xy}}{S_{xx}} = \frac{\sum y_i(x_i-\bar{x})}{\sum (x_i - \bar{x})^2}
+$$
+
 $\hat{\beta}_0, \hat{\beta}_1$ are estimated values and they are different from the actual parameter $\beta_0,\beta_1$
 
 Least square error criterion is used in standard regression models but other criteria can be used. The estimated regression line would be different depending on the criterion used.
 
 Minimization problem
-$$\min_{\beta_0,\beta_1} \sum^n_{i=1} (y_i-(\beta_0+\beta_1x_i))^2$$
+
+$$
+\min_{\beta_0,\beta_1} \sum^n_{i=1} (y_i-(\beta_0+\beta_1x_i))^2
+$$
+
 To solve, take first partial derivative of the objective function and equate it to zero
-$$\frac{\partial}{\partial \beta_0}\sum^n_{i=1} (y_i-(\beta_0+\beta_1x_i))^2=0$$
-$$\frac{\partial}{\partial \beta_1}\sum^n_{i=1} (y_i-(\beta_0+\beta_1x_i))^2=0$$
+
+$$
+\frac{\partial}{\partial \beta_0}\sum^n_{i=1} (y_i-(\beta_0+\beta_1x_i))^2=0
+$$
+
+$$
+\frac{\partial}{\partial \beta_1}\sum^n_{i=1} (y_i-(\beta_0+\beta_1x_i))^2=0
+$$
+
 Solving the equations will give
-$$\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}$$
-$$\hat{\beta}_1 = \frac{S_{xy}}{S_{xx}} = \frac{\sum y_i(x_i-\bar{x})}{\sum (x_i - \bar{x})^2}$$
+
+$$
+\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}
+$$
+
+$$
+\hat{\beta}_1 = \frac{S_{xy}}{S_{xx}} = \frac{\sum y_i(x_i-\bar{x})}{\sum (x_i - \bar{x})^2}
+$$
 
 ---
 ### Sums of squares definitions
+
 $$S_{xx} = \sum_i (x_i-\bar{x})^2 = \sum_i x_i^2 - n\bar{x}^2$$
+
 $$S_{xy} = \sum_i (x_i-\bar{x})(y_i-\bar{y}) = \sum_i x_iy_i-n\bar{x}\bar{y}$$
+
 $$S_{yy} = \sum_i (y_i - \bar{y})^2 = \sum_i y_i^2 - n\bar{y}^2$$
 
 ---
