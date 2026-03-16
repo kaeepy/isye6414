@@ -32,9 +32,9 @@ The linear models is NOT a true representation of reality but it provides a usef
 ### Linear Regression: General Model
 
 **Simple linear regression**
-$$
+\[
 Y = \beta_0 + \beta_1X + \epsilon
-$$
+\]
 Relationship between two factors, in a non-determintistic way  
 We estimate the relationship between the response and predicting variables as one straight line  
 The line doesn't fit the point perfectly but the points are around the line
