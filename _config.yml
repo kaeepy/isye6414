@@ -4,6 +4,6 @@ plugins:
 
 
 # Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
+kramdown:
+  math_engine: mathjax
+  parse_block_html: true
