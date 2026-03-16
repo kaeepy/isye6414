@@ -42,9 +42,11 @@ We estimate the relationship between the response and predicting variables as on
 The line doesn't fit the point perfectly but the points are around the line
 
 **Multple linear regression**
+
 $$
 Y= \beta_0 + \beta_1X_1 + \beta_2X_2 + ... + \epsilon
 $$
+
 Extension of simple linear regression to include more than one predicting variable
 We estimate the relationship as a plane
 
