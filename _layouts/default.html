@@ -8,6 +8,19 @@
     {% include head-custom.html %}
     <script src="https://polyfill.io"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      ignoreHtmlClass: 'tex2jax_ignore|async-hide'
+    }
+  };
+</script>
 
 
 {% seo %}
